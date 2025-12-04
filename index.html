@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>smoothtalk.com — Premium Domain For Sale</title>
+  <meta name="description" content="smoothtalk.com — premium domain ideal for podcasts, voice apps, sales training, conversational AI, public speaking and content focused on persuasive communication. Submit an offer to purchase." />
+  <meta property="og:title" content="smoothtalk.com — Premium Domain For Sale" />
+  <meta property="og:description" content="smoothtalk.com — premium domain ideal for podcasts, voice apps, sales & presentation coaching, conversational AI and media. Contact domain@smoothtalk.com" />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#1b1420" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <style>
+    :root{
+      --max-width:980px;
+      --content-width:760px;
+      --panel: rgba(255,255,255,0.98);
+      --muted: #bdb5b8;
+      --accent: #ffca6b; /* warm gold accent */
+      --accent-2: #8be3ff; /* cool highlight */
+      --text-light: #f6f4f6;
+      --bg-deep-1: #0f0b10; /* deep "velvet" background */
+      --bg-deep-2: #241528;
+      --radius:16px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html,body { height:100%; }
+    body{
+      margin:0;
+      min-height:100vh;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      background: radial-gradient(800px 400px at 30% 20%, rgba(139,227,255,0.04), transparent 12%),
+                  radial-gradient(900px 520px at 80% 70%, rgba(255,202,107,0.03), transparent 12%),
+                  linear-gradient(180deg, var(--bg-deep-1) 0%, var(--bg-deep-2) 100%);
+      color:var(--text-light);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:28px;
+      line-height:1.5;
+      overflow-x:hidden;
+    }
+
+    /* Background decoration: subtle velvet spotlight + animated waveform + speech bubbles */
+    .bg-decor {
+      position:fixed;
+      inset:0;
+      z-index:0;
+      pointer-events:none;
+      overflow:hidden;
+    }
+
+    /* smooth animated waveform using repeating-linear-gradient mask */
+    .wave {
+      position:absolute;
+      left:-10%;
+      right:-10%;
+      top:20%;
+      height:60vh;
+      opacity:0.12;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02)),
+        repeating-linear-gradient(0deg,
+          rgba(139,227,255,0.22) 0 2px,
+          rgba(139,227,255,0.04) 2px 6px,
+          rgba(255,202,107,0.12) 6px 9px,
+          transparent 9px 24px);
+      background-size: 200% 100%, 300% 100%;
+      transform: rotate(-6deg);
+      filter: blur(12px) saturate(1.2);
+      animation: waveMove 18s linear infinite;
+      mix-blend-mode: screen;
+    }
+    @keyframes waveMove {
+      from { background-position: 0% 0%, 0% 0%; }
+      to   { background-position: 100% 0%, 200% 0%; }
+    }
+
+    /* speech bubbles: translucent shapes drifting */
+    .bubble {
+      position:absolute;
+      width:160px;
+      height:96px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      transform: translateY(0) rotate(-6deg);
+      opacity:0.09;
+      filter: blur(4px);
+      mix-blend-mode: screen;
+      will-change: transform, opacity;
+      animation: floatBubble ease-in-out infinite;
+    }
+    .bubble.small { width:120px; height:72px; border-radius:14px; opacity:0.07; }
+    .bubble.right { transform: translateY(0) rotate(8deg); animation-duration:10s; }
+    .bubble.left { animation-duration:12s; animation-delay:-3s; }
+    @keyframes floatBubble {
+      0% { transform: translateY(0) rotate(-6deg); opacity:0.08; }
+      50% { transform: translateY(-28px) rotate(-2deg); opacity:0.12; }
+      100% { transform: translateY(0) rotate(-6deg); opacity:0.08; }
+    }
+
+    /* subtle radial spot behind content to create a "stage" look */
+    .spot {
+      position:fixed;
+      left:50%;
+      top:28%;
+      width:1100px;
+      height:700px;
+      transform:translateX(-50%);
+      background: radial-gradient(closest-side, rgba(255,202,107,0.04), transparent 45%);
+      filter: blur(30px);
+      opacity:0.9;
+      pointer-events:none;
+      z-index:0;
+      mix-blend-mode: screen;
+    }
+
+    /* content container */
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      padding:36px;
+      border-radius:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      backdrop-filter: blur(6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+      position:relative;
+      z-index:2;
+    }
+
+    header{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:20px;
+    }
+
+    .brand{ display:flex; gap:16px; align-items:center; }
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:12px;
+      background: linear-gradient(135deg, rgba(255,202,107,0.18), rgba(139,227,255,0.07));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--text-light);
+      font-weight:800;
+      font-size:20px;
+      letter-spacing:0.6px;
+      border:1px solid rgba(255,255,255,0.04);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.6), inset 0 -6px 14px rgba(255,255,255,0.02);
+      flex-shrink:0;
+    }
+
+    h1{ margin:0; font-size:26px; color:var(--text-light); }
+    p.lead{ margin:6px 0 0; color:var(--muted); font-size:14px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:26px;
+      align-items:start;
+    }
+
+    .hero {
+      background: linear-gradient(90deg, rgba(139,227,255,0.03), rgba(255,202,107,0.02));
+      padding:14px 16px;
+      border-radius:12px;
+      color:var(--text-light);
+      margin-bottom:16px;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .hero p{ margin:0; font-size:14px; color:var(--text-light); opacity:0.95; }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:22px;
+      border-radius:14px;
+      box-shadow: 0 8px 26px rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+      max-width:var(--content-width);
+      color:var(--text-light);
+    }
+
+    h2{ margin-top:0; font-size:20px; color:var(--text-light); }
+    .features ul{ margin:0; padding-left:18px; color:var(--muted); }
+    .features li{ margin-bottom:10px; }
+
+    .cta-row{ display:flex; gap:12px; margin-top:18px; flex-wrap:wrap; align-items:center; }
+    .btn{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:10px 16px;
+      border-radius:999px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none;
+      border:0;
+    }
+
+    .btn-primary{
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color:#111;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    }
+    .btn-ghost{
+      background:transparent;
+      border:1px solid rgba(255,255,255,0.06);
+      color:var(--muted);
+    }
+
+    .price { margin-top:16px; font-weight:700; color:var(--text-light); font-size:18px; }
+    .muted-small { color:var(--muted); font-size:13px; margin-top:6px; }
+
+    .contact-card{
+      position:sticky;
+      top:32px;
+      align-self:start;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:18px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 8px 26px rgba(0,0,0,0.5);
+      max-width:360px;
+      color:var(--text-light);
+    }
+
+    .contact-card h3{ margin:0 0 8px 0; font-size:16px; color:var(--text-light); }
+    .contact-email, .contact-email a{
+      white-space:nowrap;
+      display:inline-block;
+      font-weight:700;
+      color:var(--accent);
+      word-break: normal;
+      font-size:0.98rem;
+      text-decoration:none;
+    }
+
+    form label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    form input, form textarea {
+      width:100%;
+      padding:10px 12px;
+      border-radius:10px;
+      border:1px solid rgba(255,255,255,0.04);
+      background: rgba(255,255,255,0.02);
+      color:var(--text-light);
+      font-size:14px;
+      margin-bottom:12px;
+    }
+    form textarea{ min-height:110px; resize:vertical; }
+
+    footer{ margin-top:18px; color:var(--muted); font-size:13px; text-align:center; }
+
+    @media (max-width:880px){
+      .grid{ grid-template-columns: 1fr; gap:18px; }
+      .contact-card{ position:relative; top:auto; width:100%; max-width:none; }
+      .container{ padding:22px; }
+      .logo{ width:64px; height:64px; border-radius:12px; }
+      h1{ font-size:22px; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "url":"https://smoothtalk.com",
+        "name":"smoothtalk.com",
+        "description":"smoothtalk.com — premium domain for podcasts, voice apps, sales training, conversational AI, public speaking and persuasive communication platforms."
+      },
+      {
+        "@type":"ContactPoint",
+        "contactType":"sales",
+        "email":"domain@smoothtalk.com"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="bg-decor" aria-hidden="true">
+    <div class="spot" aria-hidden="true"></div>
+    <div class="wave" aria-hidden="true"></div>
+
+    <div class="bubble left" style="left:6%; top:18%;"></div>
+    <div class="bubble small left" style="left:18%; top:40%;"></div>
+    <div class="bubble right" style="right:6%; top:30%;"></div>
+    <div class="bubble small right" style="right:18%; bottom:22%;"></div>
+  </div>
+
+  <main class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true">ST</div>
+        <div>
+          <h1 id="main-heading">smoothtalk.com</h1>
+          <p class="lead">Premium domain for podcasts, voice-first products, presentation coaching, conversational AI and persuasive communication.</p>
+        </div>
+      </div>
+
+      <div style="text-align:right">
+        <div style="color:var(--muted);font-size:13px">For inquiries</div>
+        <div class="contact-email"><a href="mailto:domain@smoothtalk.com">domain@smoothtalk.com</a></div>
+      </div>
+    </header>
+
+    <div class="hero" role="note" aria-live="polite">
+      <p>
+        SmoothTalk.com suggests eloquence, charisma and clear voice — excellent for creators and companies building audio-first products, speech coaching, conversational UI and media that moves people.
+      </p>
+    </div>
+
+    <section class="grid" aria-label="Main content">
+      <div>
+        <article class="panel" aria-labelledby="why-title">
+          <h2 id="why-title">Why smoothtalk.com?</h2>
+          <p class="lead">A short, brandable .com that's evocative of persuasive communication, great for podcasts, voice assistants, sales training platforms, public speaking programs, and conversational AI products.</p>
+
+          <div class="features" style="margin-top:12px">
+            <ul>
+              <li>Memorable and market-ready — fits consumer media and enterprise voice products</li>
+              <li>Useful for podcast networks, voice UX platforms, sales & presentation coaching services</li>
+              <li>Short and easy to promote across marketing, social, and audio channels</li>
+            </ul>
+
+            <p style="margin-top:12px"><a href="https://corelli.com/domains.html" style="color:var(--accent)">How to Choose A Domain Name</a></p>
+          </div>
+
+          <div class="cta-row" role="group" aria-label="Actions">
+            <a class="btn btn-primary" href="#" id="inquireBtn">Make an Offer</a>
+            <a class="btn btn-ghost" href="mailto:domain@smoothtalk.com?subject=Domain%20Offer%20-%20smoothtalk.com">Email Now</a>
+          </div>
+
+          <div class="price">Domain: smoothtalk.com</div>
+          <div class="muted-small">Serious offers only. Transfer via escrow recommended for security and trust.</div>
+        </article>
+
+        <article class="panel" style="margin-top:18px" aria-labelledby="about-title">
+          <h3 id="about-title" style="margin-top:0">About this domain</h3>
+          <p class="lead">SmoothTalk.com suits founders building audio-first brands, voice-UI teams shipping conversational products, and coaches helping leaders speak with clarity and influence.</p>
+
+          <ul style="color:var(--muted);margin-top:12px">
+            <li>Great for podcast networks, voice app developers, speech coaches and sales training</li>
+            <li>Useful for product marketing, influencer initiatives, and audio-first UX experiments</li>
+            <li>Transfer-ready — we use escrow to ensure a secure and transparent transaction</li>
+          </ul>
+        </article>
+      </div>
+
+      <aside class="contact-card" aria-label="Contact & offer">
+        <div>
+          <h3 style="margin-top:0">Contact & Offer</h3>
+          <p style="margin-top:6px;color:var(--muted)">Submit an offer — this form opens your email client with the details prefilled. Or email <a href="mailto:domain@smoothtalk.com" class="contact-email">domain@smoothtalk.com</a>.</p>
+
+          <form id="inquiryForm" onsubmit="handleSubmit(event)" aria-label="Domain offer form">
+            <label for="name">Your name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+
+            <label for="email">Your email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+
+            <label for="offer">Your offer (USD)</label>
+            <input id="offer" name="offer" type="text" placeholder="Enter your offer (USD)" required />
+
+            <label for="company">Company (optional)</label>
+            <input id="company" name="company" type="text" placeholder="Your company or organization" />
+
+            <label for="country">Country</label>
+            <input id="country" name="country" type="text" placeholder="Your country" required />
+
+            <label for="phone">Phone number (optional)</label>
+            <input id="phone" name="phone" type="tel" />
+
+            <label for="message">Message (questions, timeline, escrow preference)</label>
+            <textarea id="message" name="message" placeholder="Hi — I'm submitting an offer for smoothtalk.com. Please share transfer instructions and next steps."></textarea>
+
+            <button class="btn btn-primary" type="submit" style="width:100%; margin-top:6px">Send Offer</button>
+          </form>
+
+          <footer style="margin-top:10px; text-align:left; color:var(--muted); font-size:13px">
+            Prefer a direct email? <a href="mailto:domain@smoothtalk.com" style="color:var(--accent)" class="contact-email">domain@smoothtalk.com</a>
+          </footer>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      &copy; 2025 smoothtalk.com. All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // Create lightweight visual elements for the background (no external assets)
+    (function createDecor() {
+      // no heavy DOM for performance; bubbles created via static markup in HTML
+      // nothing else needed here for the simple wave animation (handled in CSS)
+    })();
+
+    // Compose a mailto: URL from form contents to open the user's email client.
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const offer = document.getElementById('offer').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const country = document.getElementById('country').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('Domain Offer - smoothtalk.com');
+      const bodyText =
+        `Name: ${name}\n` +
+        `Email: ${email}\n` +
+        `Company: ${company || '(not provided)'}\n` +
+        `Offer (USD): ${offer}\n` +
+        `Country: ${country}\n` +
+        `Phone: ${phone || '(not provided)'}\n\n` +
+        `Message:\n${message}\n\n---\nSent from smoothtalk.com offer form`;
+
+      const body = encodeURIComponent(bodyText);
+      const mailto = `mailto:domain@smoothtalk.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+
+    document.getElementById('inquireBtn').addEventListener('click', function(e){
+      e.preventDefault();
+      const form = document.getElementById('inquiryForm');
+      if(window.innerWidth < 900){
+        form.scrollIntoView({behavior:'smooth', block:'center'});
+        form.querySelector('input').focus();
+      } else {
+        const subject = encodeURIComponent('Domain Offer - smoothtalk.com');
+        const body = encodeURIComponent('Hi — I would like to make an offer for smoothtalk.com. Please reply with transfer instructions and next steps.');
+        window.location.href = `mailto:domain@smoothtalk.com?subject=${subject}&body=${body}`;
+      }
+    });
+  </script>
+</body>
+</html>
